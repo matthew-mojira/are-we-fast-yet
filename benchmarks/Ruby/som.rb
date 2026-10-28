@@ -271,6 +271,10 @@ class Set
 end
 
 class IdentitySet < Set
+  def initialize(size = INITIAL_SIZE)
+    @items = Vector.new(size)
+  end
+
   def contains(obj)
     has_some { |it| it.equal? obj }
   end
